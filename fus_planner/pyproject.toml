@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fus_planner"
+version = "0.1.0"
+description = "Interactive treatment planning for in vivo focused-ultrasound neuromodulation in mice"
+requires-python = ">=3.10"
+authors = [{name = "Morse Lab"}]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+fus-planner = "fus_planner.gui.main:main"

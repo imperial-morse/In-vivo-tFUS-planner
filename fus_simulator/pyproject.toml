@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fus_simulator"
+version = "0.1.0"
+description = "k-Wave focused-ultrasound simulation GUI for non-experts (transducer selection + pressure calibration)"
+requires-python = ">=3.10,<3.13"
+authors = [{name = "Morse Lab"}]
+dependencies = [
+    "numpy>=1.24,<2.3",
+    "matplotlib>=3.7",
+    "PyQt5>=5.15",
+]
+
+[project.optional-dependencies]
+# Acoustic solver - install with:  pip install -e ".[solver]"
+solver = ["k-wave-python>=0.3.0", "h5py>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+fus-simulator = "fus_simulator.gui.main:main"

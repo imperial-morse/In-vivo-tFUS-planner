@@ -1,0 +1,14 @@
+# Acoustic solver. Install AFTER requirements.txt, in the same venv, and note
+# the --no-deps flag:
+#
+#   .\.venv\Scripts\pip install --no-deps -r requirements-solver.txt
+#
+# -------------
+# k-wave-python 0.6.2 ships the CPU and CUDA (GPU) binaries to solve the simulations. The GPU path
+# (kspaceFirstOrder3DG) additionally needs an NVIDIA GPU + driver.
+#
+# Needs Python 3.10 - 3.12. If the install
+# fails on metadata/build, you are almost certainly on a too-new Python: rebuild
+# the venv with  py -3.12 -m venv .venv  and retry.
+
+k-wave-python==0.6.2

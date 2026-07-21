@@ -1,0 +1,34 @@
+# fus_simulator dependencies (GUI + skull handling).
+#
+# Use a Python 3.12 interpreter:
+#     py -3.12 -m venv .venv
+#     .\.venv\Scripts\pip install -r requirements.txt
+#     .\.venv\Scripts\pip install --no-deps -r requirements-solver.txt
+#
+# ---------------------------------------------------------------------------
+# VERSIONS ARE PINNED ON PURPOSE. Do not change them to ">=".
+# ---------------------------------------------------------------------------
+
+numpy==2.0.2
+matplotlib==3.9.2
+
+# matplotlib's compiled helpers.
+pillow==10.4.0
+contourpy==1.2.1
+kiwisolver==1.4.5
+
+# GUI
+PyQt5==5.15.11
+
+# Skull handling: scipy.ndimage is used to resample the CT (core/ct_skull.py,
+# core/skull.py) and h5py reads/writes the prepared bone-fraction file. 
+scipy==1.15.3
+h5py==3.16.0
+
+# --- k-wave-python's own runtime dependencies -------------------------------
+beartype==0.22.9
+deepdiff==9.0.0
+deprecated>=1.2.14
+jaxtyping==0.3.7
+opencv-python==4.13.0.92
+tqdm>=4.60

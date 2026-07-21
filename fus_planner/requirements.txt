@@ -1,0 +1,32 @@
+# fus_planner dependencies.
+#
+#   pip install -r requirements.txt
+#
+# VERSIONS ARE PINNED ON PURPOSE. Do not relax them back to ">=".
+#
+# matplotlib 3.10/3.11, numpy >= 2.1 and pandas 3.x corrupt process memory and
+# crash the app at random, unrelated places: access violations inside
+# bezier.polynomial_coefficients, transforms.__eq__, np.isnan, inspect.cleandoc.
+# The fault is intermittent (it hit 4 of 6 identical runs), so "it worked once"
+# proves nothing. The set below is the last combination verified stable.
+#
+# After installing, verify with:
+#     python ..\mpl_stress_test.py
+# It must print ALL PASSED. Run it two or three times.
+
+numpy==2.0.2
+matplotlib==3.9.2
+pandas==2.2.3
+
+# matplotlib's compiled helpers. 
+pillow==10.4.0
+contourpy==1.2.1
+kiwisolver==1.4.5
+
+# GUI
+PyQt5==5.15.11
+
+# Medical image IO (NRRD / .nhdr volumes)
+SimpleITK==2.5.5
+pynrrd==1.1.3
+
