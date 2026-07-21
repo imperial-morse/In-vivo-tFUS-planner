@@ -58,6 +58,3 @@ per-subject CT and the atlas-space labels. Two ways to handle it in the GUI:
 2. **Proper fix:** re-co-register the CT to the labels frame in 3D Slicer
    (rigid registration, points-or-mutual-information based) and re-export.
    Then leave the offset at 0.
-
-## For more instructions
-Please refer to the FUS_Planner_Methods.pdf
