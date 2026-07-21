@@ -104,5 +104,3 @@ pip install --no-deps -r requirements-solver.txt
 The **geometry preview** works with just `requirements.txt`. The **calibration
 run** additionally needs `requirements-solver.txt` (`k-wave-python`, which uses
 the CPU and CUDA binaries); the GPU path needs an NVIDIA GPU.
-
-For more information refer to the FUS_Simulator_Methods.pdf
