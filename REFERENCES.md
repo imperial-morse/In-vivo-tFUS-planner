@@ -1,7 +1,5 @@
 # References
 
-Everything this toolbox depends on: software, physical constants, algorithms,
-and data. Versions are the ones actually installed and verified working.
 ---
 
 ## 1. Software
@@ -26,9 +24,6 @@ and data. Versions are the ones actually installed and verified working.
 | `kWaveArray` off-grid bowl source | – | Wise ES, Cox BT, Jaros J, Treeby BE. **Representing arbitrary acoustic source and sensor distributions in Fourier collocation methods.** *JASA* 146(1):278–288 (2019). doi:10.1121/1.5116132 |
 | k-wave-python | 0.6.2 | Yagubbayli F, Sinden D, Simson W. **k-Wave-python** (software). Zenodo, doi:10.5281/zenodo.10719460. <https://github.com/waltsims/k-wave-python>. Licensed LGPL-3.0. This is the Python interface; the numerics are k-Wave, so cite the Treeby papers above as well. |
 
-The CFL stability condition used to size the time step:
-Courant R, Friedrichs K, Lewy H. **Über die partiellen Differenzengleichungen der
-mathematischen Physik.** *Mathematische Annalen* 100:32–74 (1928).
 
 ### Imaging IO and GUI
 
@@ -39,7 +34,7 @@ mathematischen Physik.** *Mathematische Annalen* 100:32–74 (1928).
 | PyQt5 | 5.15.11 | Riverbank Computing Ltd. <https://riverbankcomputing.com/software/pyqt> |
 | OpenCV (`opencv-python`) | 4.13.0.92 | Bradski G. **The OpenCV Library.** *Dr. Dobb's Journal of Software Tools* (2000). Pulled in by k-wave-python. |
 
-Support libraries with no formal citation:
+Support libraries:
 Pillow 10.4.0, contourpy 1.2.1, kiwisolver 1.4.5, tqdm 4.68.2, beartype 0.22.9,
 deepdiff 9.0.0, jaxtyping 0.3.7.
 
@@ -61,8 +56,7 @@ deepdiff 9.0.0, jaxtyping 0.3.7.
 | Thermal conductivity k | 0.623 W/(m·K) at 37 °C | CRC Handbook of Chemistry and Physics / IAPWS |
 | Specific heat Cp | 4180 J/(kg·K) at 37 °C | CRC Handbook of Chemistry and Physics / IAPWS |
 
-Note the water absorption law is exactly f², which is why the solver's
-`alpha_power = 2` is exact for water and needs no rescaling.
+`alpha_power = 2` since only one frequency is used in the simulations.
 
 ### Skull (cortical bone, binary bone/water model)
 
@@ -74,14 +68,6 @@ Note the water absorption law is exactly f², which is why the solver's
 | Specific heat Cp | 1300 J/(kg·K) | **Duck (2013)**, via Constans et al. (2018) Table 3 |
 | Absorption α | 2.7·f^1.18 dB/cm → 1.19 dB/cm at 500 kHz | **Pinton et al. (2012)** |
 
-1. **Absorption, not total attenuation.** Pinton et al. separate absorption from
-   scattering. `Q = 2αI` requires absorption only. Reflection at the water/bone
-   impedance mismatch is produced by k-Wave from ρ and c, so feeding a measured
-   *transmission* loss back in as absorption would double-count it.
-2. **These are generic cortical-bone values, not mouse-measured.** No published
-   source gives a mouse-measured ρ and c. Duck's values sit between the other
-   published choices, and the impedance (the quantity reflection depends on) is
-   within 1 % across every reasonable option.
 
 ### Thermal model
 
@@ -169,8 +155,6 @@ Volumes used:
 | `DMBA_RCCF_labels_centroids.txt` | region centroids, used for targeting | – |
 | `DMBA_N02_dwi_M4D.nhdr` | MRI, planner | – |
 
-Skull thickness measured from the CT in this project (full-width half-maximum
-across the vault): median **0.18 mm**, typical range 0.15–0.25 mm, up to
-~0.35–0.40 mm at sutures.
+Skull thickness measured from the CT in this project: median **0.18 mm**
 
 ---
