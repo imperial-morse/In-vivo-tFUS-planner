@@ -1,4 +1,4 @@
-# FUS Simulator — Open-source Interactive Planning Tool for In Vivo Mouse Transcranial Focused Ultrasound Experiments 
+# Open-source Interactive Planning Tool for In Vivo Mouse Transcranial Focused Ultrasound Experiments 
 
 Copyright (C) 2026 Morse Lab
 Morse Lab, Department of Bioengineering, Imperial College London
