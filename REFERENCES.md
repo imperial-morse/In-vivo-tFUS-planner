@@ -6,7 +6,7 @@ and data. Versions are the ones actually installed and verified working.
 
 ## 1. Software
 
-### Core scientific stack
+### Core 
 
 | Package | Version | Citation |
 |---|---|---|
@@ -171,6 +171,6 @@ Volumes used:
 
 Skull thickness measured from the CT in this project (full-width half-maximum
 across the vault): median **0.18 mm**, typical range 0.15–0.25 mm, up to
-~0.35–0.40 mm at sutures and the occiput.
+~0.35–0.40 mm at sutures.
 
 ---
