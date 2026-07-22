@@ -46,6 +46,9 @@ PPW still drives the grid spacing shown in the Transducer preview.
   peak in the box, and the transmission (focus / free-field target), with XZ/XY
   pressure-field slices. It also report ISPTA, ISPPA and Mechanical index.
 
+NOTE: at the moment the simulator's attenuation values reflect those for 500kHz centre 
+frequency. We aim to extend to more frequencies after a more in depth research on
+frequency dependency attenuation values in the murine skull.
 
 ## Thermal tab
 
