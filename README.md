@@ -1,6 +1,14 @@
 # FUS Simulator — Open-source Interactive Planning Tool for In Vivo Mouse Transcranial Focused Ultrasound Experiments 
-# Copyright (C) 2026 Morse Lab
-# Licensed under the GNU GPL v3 or later; see LICENSE.
+
+Copyright (C) 2026 Morse Lab
+Morse Lab, Department of Bioengineering, Imperial College London
+Contact: v.dosso24@imperial.ac.uk
+ 
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License version 3, as published
+by the Free Software Foundation. See the LICENSE file for the full text.
+This program is distributed WITHOUT ANY WARRANTY; see sections 15 and 16
+of the LICENSE.
 
 This is a toolbox for planning and simulating in vivo focused-ultrasound (FUS)
 neuromodulation in mice. It is built for researchers who are not
